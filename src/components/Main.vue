@@ -1,19 +1,16 @@
 <script>
-import axios from 'axios';
+// Importazione componenti
+import ProjectCard from './ProjectCard.vue';
 
 export default {
     data() {
         return {
-            datas: [],
+
         }
     },
-    created() {
-        axios  
-            .get('http://127.0.0.1:8000/api/projects')
-            .then(response => {
-                console.log(response.data.response.data);
-            });
-    }
+    components: {
+        ProjectCard
+    },
 }
 </script>
 
@@ -22,8 +19,8 @@ export default {
         Componente principale
     </h1>
 
-    <div class="main-content">
-
+    <div class="main-content container d-flex justify-space-between gap-3 flex-wrap">
+        <ProjectCard />
     </div>
 </template>
 
