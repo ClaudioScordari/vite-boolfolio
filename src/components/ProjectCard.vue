@@ -22,8 +22,8 @@ export default {
 </script>
 
 <template>
-    <div  class="card" style="width: 18rem;"  v-for="project in datas" >
-        <img class="card-img-top" :src="'http://127.0.0.1:8000/storage/' + project.image_src" alt="project.name">
+    <div  class="card" style="width: calc((100% / 4) - 15px);"  v-for="project in datas" >
+       <img class="card-img-top" :src="'http://127.0.0.1:8000/storage/' + project.image_src" :alt="project.name">
 
         <div class="card-body">
             <h5 class="card-title">
