@@ -66,7 +66,9 @@ export default {
                     {{ project.description }}
                 </p>
     
-                <a href="#" class="btn btn-primary">Vedi</a>
+                <router-link class="btn btn-primary" :to="{ name: 'projects.show', params: { id: project.id } }">
+                    Vedi il progetto
+                </router-link>
             </div>
         </div>
     </div>
