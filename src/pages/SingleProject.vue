@@ -16,8 +16,28 @@ export default {
                 .get('http://127.0.0.1:8000/api/projects/' + this.$route.params.id)
                 .then(response => {
                     // dentro la variabile cè il contenuto della chiamata api al singolo project 
-                    // console.log(response.data);
-                    this.project = response.data.response;
+                    console.log(response.data);
+
+                    // Se nella risposta, alla key success, ho true, mi riempi la variabile
+                    if (response.data.success) {
+                        this.project = response.data.response;
+                    }
+
+                    // else {
+                    //     /*
+                    //         Altrimenti mi reinderizzi alla pagina 404;
+                    //         nello specifico si pusha nella cronologia di navigazione
+                    //         delle rotte il redirect della pagina 404
+                    //     */ 
+                    //    this.$router.push({ name: 'NotFound' });
+                    // }
+
+                    /*
+                        OPPURE...
+                    */
+                })
+                .catch(error => {
+                    this.$router.push({ name: 'NotFound' });
                 });
         },
     }
