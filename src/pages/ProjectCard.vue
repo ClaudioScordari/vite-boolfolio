@@ -49,23 +49,25 @@ export default {
 </script>
 
 <template>
-    <div  class="card" style="width: calc((100% / 4) - 15px);"  v-for="project in datas" >
-       <img class="card-img-top" :src="'http://127.0.0.1:8000/storage/' + project.image_src" :alt="project.name">
-
-        <div class="card-body">
-            <h5 class="card-title">
-                <span>
-                    {{ project.id }})
-                </span>
-
-                {{ project.name }}
-            </h5>
-
-            <p class="card-text">
-                {{ project.description }}
-            </p>
-
-            <a href="#" class="btn btn-primary">Vedi</a>
+    <div class="d-flex justify-content-between container pt-5">
+        <div  class="card" style="width: calc((100% / 4) - 15px);"  v-for="project in datas" >
+           <img class="card-img-top" :src="'http://127.0.0.1:8000/storage/' + project.image_src" :alt="project.name">
+    
+            <div class="card-body">
+                <h5 class="card-title">
+                    <span>
+                        {{ project.id }})
+                    </span>
+    
+                    {{ project.name }}
+                </h5>
+    
+                <p class="card-text">
+                    {{ project.description }}
+                </p>
+    
+                <a href="#" class="btn btn-primary">Vedi</a>
+            </div>
         </div>
     </div>
 

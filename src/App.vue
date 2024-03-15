@@ -1,6 +1,7 @@
 <script>
 // Importazioni componenti
 import Main from './components/Main.vue';
+import Header from './components/Header.vue';
 
 export default {
     data() {
@@ -9,27 +10,16 @@ export default {
         }
     },
     components: {
+        Header,
         Main,
     },
 }
 </script>
 
 <template>
-    <h1>
-        Vite-boolfolio
-    </h1>
+    <Header />
 
-    <hr>
-
-    <!-- Da qui dividere in componenti -->
-
-    <header>
-        Header App
-    </header>
-
-    <main>
-        <Main />
-    </main>
+    <Main />
 
     <footer>
         Footer App
