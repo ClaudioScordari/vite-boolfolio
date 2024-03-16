@@ -25,6 +25,10 @@ export default {
                 <router-link class="px-3 py-4 text-light" :to="{ name: 'projects.index' }">
                     Progetti
                 </router-link>
+
+                <router-link class="px-3 py-4 text-light" :to="{ name: 'contacts' }">
+                    Contatti
+                </router-link>
             </nav>
         </div>
     </header>

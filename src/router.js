@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage.vue';
 import ProjectCard from './pages/ProjectCard.vue';
 import SingleProject from './pages/SingleProject.vue';
 import NotFound from './pages/NotFound.vue';
+import Contacts from './pages/Contacts.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
         path: '/projects/:id',
         name: 'projects.show',
         component: SingleProject
+    },
+    {
+        path: '/contacts',
+        name: 'contacts',
+        component: Contacts
     },
     {
         path: '/:pathMatch(.*)*',
